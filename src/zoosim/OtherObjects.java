@@ -19,7 +19,7 @@ public class OtherObjects implements IObjects{
     
     //Declare a method for the object to move
      public void turn (int degrees){
-         System.out.println("The object was moved by " + degrees + " degrees");
+         System.out.println("The object was turned by " + degrees + " degrees");
      }
      
      //Declare a method to set the position of the object
@@ -29,7 +29,7 @@ public class OtherObjects implements IObjects{
         this.xposition = x; 
         this.yposition = y; 
         
-        System.out.println("The object is not at " + xposition + ", " + yposition);
+        System.out.println("The object is at " + xposition + ", " + yposition);
     }
     
 }

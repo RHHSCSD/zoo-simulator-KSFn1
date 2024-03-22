@@ -12,15 +12,15 @@ public class Animal implements IEntity{
     
     //Declare the animal fields
     private String id; 
-    private  String name; 
+    private String name; 
     private String species; 
     private Boolean sex; 
     private Double age; 
-    private int xposition; 
-    private int yposition; 
+    private int xposition = 0; 
+    private int yposition = 0; 
     private char size; 
     private int speed; 
-    private int direction; 
+    private int direction = 0; 
     private int hunger; 
     private int fatigue; 
     private Image image; 
@@ -33,8 +33,13 @@ public class Animal implements IEntity{
     }
     
     //Decalre a method for the animal to move
-    public void move (){
+    public void move (int x, int y){
         
+        //Add the postion to the existing postion
+        this.xposition += x; 
+        this.yposition += y; 
+        
+        System.out.println("The animal is moving");
     }
     
     //Decalre a method for the animal to restore hunger
@@ -51,13 +56,25 @@ public class Animal implements IEntity{
     
     //Declare a method for the animal to turn
     public void turn (int degrees){
-        this.direction = degrees; 
+        
+        //Add the degrees to the directions
+        this.direction += degrees; 
+        
+        //Reset the direction back to 0 if it passes 360
+        if (direction > 360){
+            direction = direction - 360; 
+        }
     }
     
     //Declare a method for the animal to be placed at
     public void place (int x, int y){
         this.xposition = x; 
         this.yposition = y;
+    }
+    
+    //Create a method to get the name
+    public String getName(){
+        return name; 
     }
     
 }       
