@@ -8,6 +8,27 @@ package zoosim;
  *
  * @author michael.roy-diclemen
  */
+
+/*
+How would you modify this structure to allow for predator/prey interactions and
+Carnivores/Omnivores/Herbivores
+
+we would start by defining data structures and algorithms to represent animals 
+and their behaviors. Each animal would have attributes like diet type (carnivore, 
+herbivore, omnivore), hunger level, and movement capabilities. The simulation 
+would model interactions between animals, where carnivores hunt prey based on 
+certain criteria like proximity and hunger level, while prey animals try to avoid 
+being caught. We would implement algorithms to simulate these interactions dynamically 
+over time, adjusting population sizes based on predation rates and reproductive 
+rates. Additionally, we might incorporate environmental factors like habitat 
+availability and food resources to further influence animal behaviors and population 
+dynamics. 
+
+*/
+
+
+import java.util.Random; 
+
 public class ZooSim {
 
     /**
@@ -133,9 +154,16 @@ public static int removeAnim(Animal[] animals, int counter) {
      * @param counter
      */
     public static void move(Animal[] animals, int counter) {
+        
+        //Open random
+        Random random = new Random ();
+        
         // Run a for each loop to go through each animal
         for (int i = 0; i < counter; i++) {
-        animals[i].move(30, 30);
+        //Decalre variables
+        int x = random.nextInt(0, 500); 
+        int y = random.nextInt(0, 500); 
+        animals[i].move(x, y);
 }
 }
 

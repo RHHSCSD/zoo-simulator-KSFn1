@@ -48,7 +48,7 @@ public class Animal implements IEntity{
      *
      */
     public void makeSound(){
-        System.out.println("Animal sounds");
+        System.out.println("Animal sounds...");
     }
     
     //Decalre a method for the animal to move
@@ -64,7 +64,7 @@ public class Animal implements IEntity{
         this.xposition += x; 
         this.yposition += y; 
         
-        System.out.println("The " + this.name + " is moving");
+        System.out.println("The " + this.name + " is moving. The " + this.name + " is now at " + x + ", " + y +".");
     }
     
     //Decalre a method for the animal to restore hunger
@@ -74,7 +74,7 @@ public class Animal implements IEntity{
      */
     public void eat(){
         this.hunger = 100; 
-        System.out.println("The " + this.name + " is not hungary anymore");
+        System.out.println("The " + this.name + " is not hungary anymore.");
     }
     
     //Declare a method for the animal to restore fatigue
@@ -84,7 +84,7 @@ public class Animal implements IEntity{
      */
     public void sleep(){
         this.fatigue = 100; 
-        System.out.println("The " + this.name + " is not tired anymore");
+        System.out.println("The " + this.name + " is not tired anymore.");
     }
     
     //Declare a method for the animal to turn
