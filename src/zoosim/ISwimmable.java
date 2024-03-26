@@ -10,5 +10,8 @@ package zoosim;
  */
 public interface ISwimmable {
     
+    /**
+     *
+     */
     public void canSurface(); 
 }

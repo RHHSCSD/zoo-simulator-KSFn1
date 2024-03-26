@@ -18,11 +18,22 @@ public class OtherObjects implements IObjects{
     
     
     //Declare a method for the object to move
+
+    /**
+     *
+     * @param degrees
+     */
      public void turn (int degrees){
          System.out.println("The object was turned by " + degrees + " degrees");
      }
      
      //Declare a method to set the position of the object
+
+    /**
+     *
+     * @param x
+     * @param y
+     */
     public void place (int x, int y){
         
         //Update the exisiting fields 

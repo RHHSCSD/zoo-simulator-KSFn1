@@ -11,9 +11,27 @@ package zoosim;
 public interface IEntity extends IObjects{
     
     //Declare the interface methods
+
+    /**
+     *
+     * @param x
+     * @param y
+     */
     public void move (int x, int y);
+
+    /**
+     *
+     */
     public void makeSound (); 
+
+    /**
+     *
+     */
     public void eat ();
+
+    /**
+     *
+     */
     public void sleep(); 
     
 }

@@ -11,7 +11,18 @@ package zoosim;
 public interface IObjects {
     
     //Delcare the interface methods
+
+    /**
+     *
+     * @param degrees
+     */
     public void turn (int degrees); 
+
+    /**
+     *
+     * @param x
+     * @param y
+     */
     public void place (int x, int y); 
     
 }

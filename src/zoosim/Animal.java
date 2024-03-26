@@ -28,17 +28,36 @@ public class Animal implements IEntity{
     
     
     //Create constructors
+
+    /**
+     *
+     */
     public Animal (){}; 
+
+    /**
+     *
+     * @param name
+     */
     public Animal (String name){
         
         this.name = name; 
     }
     //Declare a method for the animal to make sounds 
+
+    /**
+     *
+     */
     public void makeSound(){
         System.out.println("Animal sounds");
     }
     
     //Decalre a method for the animal to move
+
+    /**
+     *
+     * @param x
+     * @param y
+     */
     public void move (int x, int y){
         
         //Add the postion to the existing postion
@@ -49,18 +68,31 @@ public class Animal implements IEntity{
     }
     
     //Decalre a method for the animal to restore hunger
+
+    /**
+     *
+     */
     public void eat(){
         this.hunger = 100; 
         System.out.println("The " + this.name + " is not hungary anymore");
     }
     
     //Declare a method for the animal to restore fatigue
+
+    /**
+     *
+     */
     public void sleep(){
         this.fatigue = 100; 
         System.out.println("The " + this.name + " is not tired anymore");
     }
     
     //Declare a method for the animal to turn
+
+    /**
+     *
+     * @param degrees
+     */
     public void turn (int degrees){
         
         //Add the degrees to the directions
@@ -73,17 +105,33 @@ public class Animal implements IEntity{
     }
     
     //Declare a method for the animal to be placed at
+
+    /**
+     *
+     * @param x
+     * @param y
+     */
     public void place (int x, int y){
         this.xposition = x; 
         this.yposition = y;
     }
     
     //Create a method to get the name
+
+    /**
+     *
+     * @return
+     */
     public String getName(){
         return name; 
     }
     
     //Create a method to set the name
+
+    /**
+     *
+     * @param name
+     */
     public void setName (String name){
         this.name = name; 
         

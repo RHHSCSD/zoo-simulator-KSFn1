@@ -14,12 +14,21 @@ public class WaterAnim extends Animal implements ISwimmable {
     private boolean canBreath; 
     
     //Create a constructor to set the name
+
+    /**
+     *
+     * @param name
+     */
      public WaterAnim (String name){
         
         super(name); 
     }
     
     //Decalre a method to bring the animal to the surface
+
+    /**
+     *
+     */
     public void canSurface(){
         System.out.println("The" + super.getName() +" is on the surface");
     }

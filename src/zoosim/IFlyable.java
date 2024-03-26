@@ -10,8 +10,19 @@ package zoosim;
  */
 public interface IFlyable {
     
+    /**
+     *
+     */
     public void fly();
+
+    /**
+     *
+     */
     public void land();
+
+    /**
+     *
+     */
     public void isFlying();
     
 }
