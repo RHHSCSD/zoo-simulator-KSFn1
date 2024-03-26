@@ -177,7 +177,7 @@ public static int removeAnim(Animal[] animals, int counter) {
      * @param counter
      */
     public static void stats (Animal[] animals, int counter){
-        System.out.println("There are " + counter + " animals in the zoo" );
+        System.out.println("There are " + counter + " animals in the zoo." );
     }
     
     

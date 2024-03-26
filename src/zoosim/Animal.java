@@ -64,7 +64,7 @@ public class Animal implements IEntity{
         this.xposition += x; 
         this.yposition += y; 
         
-        System.out.println("The " + this.name + " is moving. The " + this.name + " is now at " + x + ", " + y +".");
+        System.out.println("The " + this.name + " is moving... The " + this.name + " is now at " + x + ", " + y +".");
     }
     
     //Decalre a method for the animal to restore hunger
