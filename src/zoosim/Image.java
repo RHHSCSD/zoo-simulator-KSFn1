@@ -11,7 +11,7 @@ package zoosim;
 public class Image {
     
     //Decalre the width and height fields 
-    int height; 
-    int width; 
+    public int height; 
+    public int width; 
     
 }

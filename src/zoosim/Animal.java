@@ -18,15 +18,21 @@ public class Animal implements IEntity{
     private Double age; 
     private int xposition = 0; 
     private int yposition = 0; 
-    private char size; 
+    private int size; 
     private int speed; 
     private int direction = 0; 
     private int hunger; 
     private int fatigue; 
-    private Image image; 
+    private Image image = new Image(); 
     private String sound;
     
     
+    //Create constructors
+    public Animal (){}; 
+    public Animal (String name){
+        
+        this.name = name; 
+    }
     //Declare a method for the animal to make sounds 
     public void makeSound(){
         System.out.println("Animal sounds");
@@ -39,19 +45,19 @@ public class Animal implements IEntity{
         this.xposition += x; 
         this.yposition += y; 
         
-        System.out.println("The animal is moving");
+        System.out.println("The " + this.name + " is moving");
     }
     
     //Decalre a method for the animal to restore hunger
     public void eat(){
         this.hunger = 100; 
-        System.out.println("The animal is not hungary anymore");
+        System.out.println("The " + this.name + " is not hungary anymore");
     }
     
     //Declare a method for the animal to restore fatigue
     public void sleep(){
         this.fatigue = 100; 
-        System.out.println("The animal is not tired anymore");
+        System.out.println("The " + this.name + " is not tired anymore");
     }
     
     //Declare a method for the animal to turn
