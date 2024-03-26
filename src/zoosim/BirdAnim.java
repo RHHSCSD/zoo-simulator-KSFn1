@@ -10,6 +10,12 @@ package zoosim;
  */
 public class BirdAnim extends Animal implements IFlyable{
     
+    //Create a constructor to set the name
+     public BirdAnim (String name){
+        
+        super(name); 
+    }
+    
     //Declare the fileds
     private boolean canFly; 
     

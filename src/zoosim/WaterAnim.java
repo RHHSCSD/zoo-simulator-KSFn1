@@ -13,9 +13,15 @@ public class WaterAnim extends Animal implements ISwimmable {
     //Decalre the WaterAnim fields
     private boolean canBreath; 
     
+    //Create a constructor to set the name
+     public WaterAnim (String name){
+        
+        super(name); 
+    }
+    
     //Decalre a method to bring the animal to the surface
     public void canSurface(){
-        System.out.println("This animal is on the surface");
+        System.out.println("The" + super.getName() +" is on the surface");
     }
     
 }

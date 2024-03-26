@@ -19,17 +19,19 @@ public class ZooSim {
         
         
         //Decalre animal objects
-        Animal horse = new Animal("horse"); 
-        Animal cow = new Animal("cow"); 
-        Animal dog = new Animal("dog"); 
+        Animal horse = new LandAnim ("horse"); 
+        Animal fish = new WaterAnim ("fish"); 
+        Animal eagle = new BirdAnim("eagle"); 
         Animal cat = new Animal("cat"); 
+        String name = "lion"; 
+        
         
         //Delcare an animal array
         Animal[] animals = new Animal [10]; 
         
         animals[0] = horse; 
-        animals[1] = cow; 
-        animals[2] = dog; 
+        animals[1] = fish; 
+        animals[2] = eagle; 
         animals[3] = cat; 
         
         //Decalre a counter variable
@@ -46,66 +48,51 @@ public class ZooSim {
              counter++; 
          }
         }
-        
-        feed(animals);
-        sleep(animals); 
-        stats(counter); 
+        animals = addAnimal(animals, name, counter);
+        feed(animals, counter);
+        sleep(animals, counter); 
+        stats(animals, counter); 
         move(animals, counter); 
-        addAnimal(animals, new Animal());
+        
         
      
     }
     
     //Create a method to add an animal to the zoo
-   public static void addAnimal(Animal[] animals, Animal newAnimal) {
-        // Find an empty spot in the array
-        int index = 0;
-        while (index < animals.length && animals[index] != null) {
-            index++;
-        }
+   public static Animal[] addAnimal(Animal[] animals, String name, int counter) {
         
-        // Add the new animal if there's space
-        if (index < animals.length) {
-            animals[index] = newAnimal;
-            System.out.println(newAnimal.getName() + " added to the zoo!");
-        } else {
-            System.out.println("No more space in the zoo!");
-        }
+       //Create a new animal with the name passed in
+       Animal newAnimal = new Animal (name); 
+       animals[counter++] = newAnimal; 
+      
+       return animals; 
     }
     
     
     //Create a method to move the animals
     public static void move(Animal[] animals, int counter) {
         // Run a for each loop to go through each animal
-        for (Animal animal : animals) {
-            // move the animal
-            animal.move(30, 30);
-    }
+        for (int i = 0; i < counter; i++) {
+        animals[i].move(30, 30);
+}
 }
 
     
     
     //Create a method to display zoo stats
-    public static void stats (int counter){
+    public static void stats (Animal[] animals, int counter){
         System.out.println("There are " + counter + " animals in the zoo" );
     }
     
     
     
     //Create a method to feed all animals
-    public static void feed (Animal[] animals){
-        
-        //Run a for loop to go through each animal one by one
-        for (int i = 0; i < animals.length; i++){
-            
-            //Create a new animal
-            animals[i] = new Animal();
-        }
+    public static void feed (Animal[] animals, int counter){
 
         //Run a for each loop to go through each animal
-        for (Animal animal : animals){
+        for (int i = 0; i < counter; i++) {
             //feed the animal
-            animal.eat();
+            animals[i].eat();
         }
     
     
@@ -113,19 +100,12 @@ public class ZooSim {
     
     
        //Create a method to feed all animals
-    public static void sleep (Animal[] animals){
+    public static void sleep (Animal[] animals, int counter){
         
-        //Run a for loop to go through each animal one by one
-        for (int i = 0; i < animals.length; i++){
-            
-            //Create a new animal
-            animals[i] = new Animal();
-        }
-
-        //Run a for each loop to go through each animal
-        for (Animal animal : animals){
-            //Make the animal sleep
-            animal.sleep();
+       //Run a for each loop to go through each animal
+        for (int i = 0; i < counter; i++) {
+            //feed the animal
+            animals[i].sleep();
         }
     
     

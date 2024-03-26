@@ -10,4 +10,9 @@ package zoosim;
  */
 public class LandAnim extends Animal {
     
+    //Create a constructor to set the name
+     public LandAnim (String name){
+        
+        super(name); 
+    }
 }

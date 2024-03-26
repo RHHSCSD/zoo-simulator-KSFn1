@@ -83,4 +83,10 @@ public class Animal implements IEntity{
         return name; 
     }
     
+    //Create a method to set the name
+    public void setName (String name){
+        this.name = name; 
+        
+    }
+    
 }       
