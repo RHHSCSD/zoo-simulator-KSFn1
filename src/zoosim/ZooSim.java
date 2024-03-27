@@ -177,6 +177,10 @@ public static int removeAnim(Animal[] animals, int counter) {
      * @param counter
      */
     public static void stats (Animal[] animals, int counter){
+        //Run a loop to go through every animal in the array
+        for (int i = 0; i < counter; i ++){
+            System.out.println("Ther is a " + animals[i].getName() + " in the zoo");
+        }
         System.out.println("There are " + counter + " animals in the zoo." );
     }
     
